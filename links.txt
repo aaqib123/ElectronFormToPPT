@@ -1,0 +1,6 @@
+
+https://gitbrent.github.io/PptxGenJS/#try
+https://gitbrent.github.io/PptxGenJS/docs/masters.html
+file:///C:/Users/IBM_ADMIN/Documents/Code/form/node_modules/pptxgenjs/examples/pptxgenjs-demo.html#tab7
+
+https://stackoverflow.com/questions/29922771/convert-rtf-to-and-from-plain-text

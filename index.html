@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="C:\Users\IBM_ADMIN\Documents\Code\form\node_modules\bootstrap\dist\css\bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div>
+      <form id="creds">
+        <div class="form-group">
+          <label for="question1">Example textarea</label>
+          <textarea class="form-control" id="question1" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="question2">Example textarea</label>
+          <textarea class="form-control" id="question2" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="question3">Example textarea</label>
+          <textarea class="form-control" id="question3" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="question4">Example textarea</label>
+          <textarea class="form-control" id="question4" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="question5">Example textarea</label>
+          <textarea class="form-control" id="question5" rows="3"></textarea>
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script>
+      const electron = require("electron");
+      const { ipcRenderer } = electron;
+
+      const form = document.querySelector("form");
+      form.addEventListener("submit", submitForm);
+
+      function submitForm(e) {
+        e.preventDefault();
+        // const formdata = document.querySelector("#creds");
+        // ipcRenderer.send("formdata", formdata);
+        let answer1 = document.getElementById("question1").value;
+        let answer2 = document.getElementById("question2").value;
+        let answer3 = document.getElementById("question3").value;
+        let answer4 = document.getElementById("question4").value;
+        let answer5 = document.getElementById("question5").value;
+
+        let dataObject = {
+          answer1: answer1,
+          answer2: answer2,
+          answer3: answer3,
+          answer4: answer4,
+          answer5: answer5
+        };
+        ipcRenderer.send("formdata", dataObject);
+      }
+    </script>
+  </body>
+</html>

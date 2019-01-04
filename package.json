@@ -1,0 +1,18 @@
+{
+  "name": "case-study",
+  "version": "0.0.1",
+  "main": "main.js",
+  "description": "electron app for user form to ppt generation",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "pptxgenjs": "^2.4.0"
+  }
+}
