@@ -8,28 +8,77 @@
       href="C:\Users\IBM_ADMIN\Documents\Code\form\node_modules\bootstrap\dist\css\bootstrap.min.css"
     />
   </head>
-  <body>
+  <body class="m-5">
     <div>
       <form id="creds">
-        <div class="form-group">
-          <label for="question1">Example textarea</label>
-          <textarea class="form-control" id="question1" rows="3"></textarea>
+        <div class="form-group h2">
+          <label for="Title_project">Project Title</label>
+          <input
+            class="form-control"
+            type="text"
+            id="project"
+            placeholder="title"
+          />
         </div>
         <div class="form-group">
-          <label for="question2">Example textarea</label>
-          <textarea class="form-control" id="question2" rows="3"></textarea>
+          <label for="question1"
+            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?</label
+          >
+          <textarea
+            class="form-control"
+            id="question1"
+            rows="3"
+            value="asdf"
+          ></textarea>
         </div>
         <div class="form-group">
-          <label for="question3">Example textarea</label>
-          <textarea class="form-control" id="question3" rows="3"></textarea>
+          <label for="question2"
+            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?</label
+          >
+          <textarea
+            class="form-control"
+            id="question2"
+            rows="3"
+            value="asdf"
+          ></textarea>
         </div>
         <div class="form-group">
-          <label for="question4">Example textarea</label>
-          <textarea class="form-control" id="question4" rows="3"></textarea>
+          <label for="question3"
+            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?</label
+          >
+          <textarea
+            class="form-control"
+            id="question3"
+            rows="3"
+            value="asdf"
+          ></textarea>
         </div>
         <div class="form-group">
-          <label for="question5">Example textarea</label>
-          <textarea class="form-control" id="question5" rows="3"></textarea>
+          <label for="question4"
+            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?</label
+          >
+          <textarea
+            class="form-control"
+            id="question4"
+            rows="3"
+            value="asdf"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="question5"
+            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?</label
+          >
+          <textarea
+            class="form-control"
+            id="question5"
+            rows="3"
+            value="asdf"
+          ></textarea>
         </div>
         <input type="submit" value="Submit" />
       </form>
@@ -46,6 +95,7 @@
         e.preventDefault();
         // const formdata = document.querySelector("#creds");
         // ipcRenderer.send("formdata", formdata);
+        let Title_project = document.getElementById("project").value;
         let answer1 = document.getElementById("question1").value;
         let answer2 = document.getElementById("question2").value;
         let answer3 = document.getElementById("question3").value;
@@ -53,6 +103,7 @@
         let answer5 = document.getElementById("question5").value;
 
         let dataObject = {
+          project: Title_project,
           answer1: answer1,
           answer2: answer2,
           answer3: answer3,
