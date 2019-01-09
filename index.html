@@ -76,27 +76,26 @@
       function submitForm(e) {
         console.log("clicked");
         e.preventDefault();
-        let Title_project = document.getElementById("project").value;
+        let title_project = document.getElementById("project").value;
+        let answer0 = document.getElementById("question1").value;
+        let answer1 = document.getElementById("question2").value;
+        let answer2 = document.getElementById("question3").value;
+        let answer3 = document.getElementById("question4").value;
+        let answer4 = document.getElementById("question5").value;
         if (
-          document.getElementById("project").value == "" ||
-          document.getElementById("question1").value == "" ||
-          document.getElementById("question2").value == "" ||
-          document.getElementById("question3").value == "" ||
-          document.getElementById("question4").value == "" ||
-          document.getElementById("question5").value == ""
+          title_project == "" ||
+          answer0 == "" ||
+          answer1 == "" ||
+          answer2 == "" ||
+          answer3 == "" ||
+          answer4 == ""
         ) {
           document.getElementById("error").innerHTML =
             "Please fill all fields.";
           document.getElementById("error").style.visibility = "visible";
         } else {
-          let answer0 = document.getElementById("question1").value;
-          let answer1 = document.getElementById("question2").value;
-          let answer2 = document.getElementById("question3").value;
-          let answer3 = document.getElementById("question4").value;
-          let answer4 = document.getElementById("question5").value;
-
           let dataObject = {
-            project: Title_project,
+            project: title_project,
             answer0: answer0,
             answer1: answer1,
             answer2: answer2,

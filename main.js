@@ -38,11 +38,11 @@ createPPT = data => {
   //function createPPT(data) {
   console.log("ppt");
   var questions = [
-    "Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?",
-    "Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?",
-    "Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?",
-    "Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?",
-    "Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?"
+    "1.Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?",
+    "2.Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?",
+    "3.Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?",
+    "4.Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?",
+    "5.Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium constituam cu vis. Mea ei hinc nemore?"
   ];
   var pptx = new pptxgenjs();
   //---------------------------------------------------------------------------------------------------
