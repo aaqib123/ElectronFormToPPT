@@ -12,6 +12,7 @@
 /build
 
 # misc
+/case-study-win32-x64
 .DS_Store
 .env.local
 .env.development.local

@@ -1,0 +1,7 @@
+body {
+  background-color: #f3f2f2;
+}
+input[type="text"],
+textarea {
+  background-color: #cfcfcf !important;
+}

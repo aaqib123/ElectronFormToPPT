@@ -1,12 +1,13 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>PPT Generator!</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="C:\Users\IBM_ADMIN\Documents\Code\form\node_modules\bootstrap\dist\css\bootstrap.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="custom.css" />
   </head>
   <body class="m-5">
     <div>
@@ -17,70 +18,51 @@
             class="form-control"
             type="text"
             id="project"
-            placeholder="title"
+            placeholder="Project name"
           />
         </div>
         <div class="form-group">
-          <label for="question1"
-            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
-            constituam cu vis. Mea ei hinc nemore?</label
-          >
-          <textarea
-            class="form-control"
-            id="question1"
-            rows="3"
-            value="asdf"
-          ></textarea>
+          <label for="question1">
+            Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?
+          </label>
+          <textarea class="form-control" id="question1" rows="3"></textarea>
         </div>
         <div class="form-group">
-          <label for="question2"
-            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
-            constituam cu vis. Mea ei hinc nemore?</label
-          >
-          <textarea
-            class="form-control"
-            id="question2"
-            rows="3"
-            value="asdf"
-          ></textarea>
+          <label for="question2">
+            Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?
+          </label>
+          <textarea class="form-control" id="question2" rows="3"></textarea>
         </div>
         <div class="form-group">
-          <label for="question3"
-            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
-            constituam cu vis. Mea ei hinc nemore?</label
-          >
-          <textarea
-            class="form-control"
-            id="question3"
-            rows="3"
-            value="asdf"
-          ></textarea>
+          <label for="question3">
+            Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?
+          </label>
+          <textarea class="form-control" id="question3" rows="3"></textarea>
         </div>
         <div class="form-group">
-          <label for="question4"
-            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
-            constituam cu vis. Mea ei hinc nemore?</label
-          >
-          <textarea
-            class="form-control"
-            id="question4"
-            rows="3"
-            value="asdf"
-          ></textarea>
+          <label for="question4">
+            Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?
+          </label>
+          <textarea class="form-control" id="question4" rows="3"></textarea>
         </div>
         <div class="form-group">
-          <label for="question5"
-            >Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
-            constituam cu vis. Mea ei hinc nemore?</label
-          >
-          <textarea
-            class="form-control"
-            id="question5"
-            rows="3"
-            value="asdf"
-          ></textarea>
+          <label for="question5">
+            Lorem ipsum dolor sit amet, iudico doming cum an, nemore posidonium
+            constituam cu vis. Mea ei hinc nemore?
+          </label>
+          <textarea class="form-control" id="question5" rows="3"></textarea>
         </div>
-        <input type="submit" value="Submit" />
+        <input class="btn btn-outline-primary" type="submit" value="Submit" />
+        <div
+          class="alert alert-danger"
+          role="alert"
+          id="error"
+          style="visibility: hidden;margin-top: 8px;"
+        ></div>
       </form>
     </div>
 
@@ -92,25 +74,39 @@
       form.addEventListener("submit", submitForm);
 
       function submitForm(e) {
+        console.log("clicked");
         e.preventDefault();
-        // const formdata = document.querySelector("#creds");
-        // ipcRenderer.send("formdata", formdata);
         let Title_project = document.getElementById("project").value;
-        let answer1 = document.getElementById("question1").value;
-        let answer2 = document.getElementById("question2").value;
-        let answer3 = document.getElementById("question3").value;
-        let answer4 = document.getElementById("question4").value;
-        let answer5 = document.getElementById("question5").value;
+        if (
+          document.getElementById("project").value == "" ||
+          document.getElementById("question1").value == "" ||
+          document.getElementById("question2").value == "" ||
+          document.getElementById("question3").value == "" ||
+          document.getElementById("question4").value == "" ||
+          document.getElementById("question5").value == ""
+        ) {
+          document.getElementById("error").innerHTML =
+            "Please fill all fields.";
+          document.getElementById("error").style.visibility = "visible";
+        } else {
+          let answer0 = document.getElementById("question1").value;
+          let answer1 = document.getElementById("question2").value;
+          let answer2 = document.getElementById("question3").value;
+          let answer3 = document.getElementById("question4").value;
+          let answer4 = document.getElementById("question5").value;
 
-        let dataObject = {
-          project: Title_project,
-          answer1: answer1,
-          answer2: answer2,
-          answer3: answer3,
-          answer4: answer4,
-          answer5: answer5
-        };
-        ipcRenderer.send("formdata", dataObject);
+          let dataObject = {
+            project: Title_project,
+            answer0: answer0,
+            answer1: answer1,
+            answer2: answer2,
+            answer3: answer3,
+            answer4: answer4
+          };
+          document.getElementById("error").innerHTML = "";
+          ipcRenderer.send("formdata", dataObject);
+          document.getElementById("error").style.visibility = "hidden";
+        }
       }
     </script>
   </body>

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "electron-packager": "^13.0.1",
     "pptxgenjs": "^2.4.0"
   }
 }
